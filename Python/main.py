@@ -1,10 +1,15 @@
 """
 这个文件提供了学习Python函数时用到的代码
 """
-import sys
-sys.path.append('/Users/zengxiaowei/STUDY/Language/Language_Learning')
+# import sys
+# sys.path.append('/Users/zengxiaowei/STUDY/Language/Language_Learning')
 import time
-from Python import nums_data
+from data.nums_data import nums
+import numpy
+print(numpy.__file__)
+print(numpy.__version__)
+
+
     
 """
 装饰器
@@ -78,7 +83,7 @@ def merge_sort(nums):
     merge_sort_recursion(nums, 0, len(nums) - 1)
     return nums 
          
-merge_sort(nums_data.nums)
+merge_sort(nums)
 
 
 
