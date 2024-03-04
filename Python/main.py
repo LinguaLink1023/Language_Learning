@@ -82,8 +82,10 @@ def merge_sort(nums):
     """   
     merge_sort_recursion(nums, 0, len(nums) - 1)
     return nums 
-         
-merge_sort(nums)
+    
+test = 0
+merge_sort(nums) if test == 1 else print("还没有开始!")     
+#merge_sort(nums)
 
 
 
