@@ -1,11 +1,23 @@
+import time
+from datetime import datetime
+
 class SyrupMixer:
-    test_volume = 10
+    counts = 0
     def __init__(self, model='Classic', max_water_volume=20, max_sugar_volume=15):
         self.model = model
         self.max_water_volume = max_water_volume
         self.max_sugar_volume = max_sugar_volume
         self.water_volume = 0
         self.sugar_volume = 0
+        SyrupMixer.counts += 1
+        self.id = SyrupMixer.counts
+        
+    def accept_time(self):
+        timestamp = time.time()  # 获取当前的时间戳
+        # 使用datetime.fromtimestamp()将时间戳转换为datetime对象
+        dt_object = datetime.fromtimestamp(timestamp)
+        # 使用strftime()将datetime对象格式化为字符串      
+        self.device_accept_time = dt_object.strftime("%Y-%m-%d %H:%M:%S") 
         
     def add_water(self, volume):
         if self.water_volume + volume > self.max_water_volume:
