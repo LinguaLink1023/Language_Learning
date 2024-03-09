@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <math.h>
+#include <iso646.h>
+#include <stdbool.h>
+
 typedef double real;
 
 int main() {
-    int GOLD_COUNTS = 999;// 假设这个变量是别人定义的
-    double perGrame = 655.34;
-    int total_cost = GOLD_COUNTS * (int)perGrame;
-    printf("total_cost = %d\n", total_cost);
-    printf("sizeof(perGrame) = %zd\n", sizeof perGrame);
-    printf("sizeof((double)perGrame) = %zd\n", sizeof ((int)perGrame));
+    bool canDo = true;
+    int number = 0;
+    if (canDo) {
+        number = 100;
+    } else {
+        number = 59;
+    }
+    printf("number = %d\n", number);
     return 0;
 }

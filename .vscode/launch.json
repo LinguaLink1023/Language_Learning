@@ -8,11 +8,16 @@
             "name": "C: Run",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/C/main",
+            "program": "${workspaceFolder}/C/Day5_Operator/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "LANG",
+                    "value": "zh_CN.UTF-8" // 或者你系统支持的其他UTF-8编码的locale
+                }
+            ],
             "externalConsole": false,
             "MIMode": "lldb"
         },
